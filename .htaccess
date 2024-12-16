@@ -1,0 +1,7 @@
+# Supprime les extensions .html
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# Page 404 
+ErrorDocument 404 /404.html
