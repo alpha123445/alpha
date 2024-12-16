@@ -1,0 +1,620 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body, html {
+    font-family: 'Delius Swash Caps', cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #000;
+    background-color: #FFF4DB;
+    /*margin: 0;*/
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media (max-width: 768px) {
+    body, html {
+        font-family: 'Montserrat', sans-serif;
+    }
+}
+
+
+h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Navigation */
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #FFF4DB;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #2764AE;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* Icône du menu hamburger */
+.hamburger {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #000;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+}
+
+/* Styles pour les mobiles */
+@media (max-width: 768px) {
+    header nav {
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    header nav ul {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 200px;
+        height: 100%;
+        flex-direction: column;
+        background-color: #2764AE;
+        padding-top: 50px;
+        padding-left: 20px;
+        transition: left 0.3s ease;
+    }
+
+    header nav ul li {
+        margin: 15px 0;
+    }
+
+    header nav ul.open {
+        left: 0;
+    }
+}
+
+/* Introduction */
+.intro {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    text-align: center;   
+    margin-top: 20px;
+}
+
+/* Image */
+.profile-photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 30%;
+    margin-bottom: 10px; 
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.animated-text {
+    font-size: 2.5rem;
+    color: #2764AE;
+    animation: fadeIn 1s ease-out, bounce 1s ease-out infinite alternate;
+}
+
+
+/* CV Section */
+.card {
+    background-color: #F8F1E7;
+    border: 2px solid #000;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+}
+
+.card h2 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.card p, .card ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.skills .skill, .interests p {
+    display: flex;
+    align-items: center;
+}
+
+.skills .skill i {
+    margin-right: 10px;
+    color: #000;
+}
+
+/* Portfolio Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-card {
+    background-color: #F8F1E7;
+    border: 2px solid #000;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #000;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.project-link {
+    color: #2764AE;
+    font-weight: 600;
+}
+
+/* Formulaire de contact */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #F8F1E7;
+    border: 2px solid #000;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    form {
+        border: none;
+    }
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #FFAB1F;
+    border: 1px solid #2764AE;
+    border-radius: 5px;
+    color: #000;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #2764AE;
+    color: #FFF;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* Détails du projet */
+.project-details {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.project-details img {
+    max-width: 80%;
+    height: auto;
+    margin: 20px 0;
+    border: 2px solid #000;
+    border-radius: 8px;
+}
+
+.project-details p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #2764AE;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.project-link:hover {
+    background-color: #174a86;
+}
+
+
+/* Footer */
+footer {
+    background-color: #2764AE; 
+    color: #FFF4DB; 
+    padding: 20px 0;
+    margin-top: auto; 
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links li {
+    margin: 0;
+}
+
+.footer-links a {
+    color: #FFF4DB;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #FFAB1F; 
+}
+
+.social-link {
+    color: #FFF4DB;
+    font-size: 1.5em;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #FFAB1F;
+}
+
+/* Media Querie */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        flex: none;
+    }
+
+    .footer-left ul {
+        justify-content: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .social-link {
+        margin: 0 10px;
+    }
+}
+
+
+
+
+
+
+/* Gestion des compétences */
+#skills-manager {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: #FFF4DB;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#skills-manager h2.section-title {
+    font-size: 1.8em;
+    color: #2764AE;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+
+#add-skill-form {
+    flex: 1;
+    max-width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#add-skill-form label {
+    font-weight: bold;
+    font-size: 1em;
+    color: #333;
+}
+
+#add-skill-form input,
+#add-skill-form textarea,
+#add-skill-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+#add-skill-form input:focus,
+#add-skill-form textarea:focus,
+#add-skill-form select:focus {
+    border-color: #2764AE;
+    outline: none;
+}
+
+#add-skill-form button {
+    background-color: #2764AE;
+    color: #FFF;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#add-skill-form button:hover {
+    background-color: #174a86;
+}
+
+
+#skills-list {
+    flex: 2;
+    max-width: 50%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#skills-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFF;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#skills-list .details {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+#skills-list .details strong {
+    display: block;
+    font-size: 1.2em;
+    color: #2764AE;
+}
+
+#skills-list .details p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 0.9em;
+}
+
+#skills-list button {
+    padding: 8px 12px;
+    font-size: 0.9em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#skills-list button.edit {
+    background-color: #FFC107;
+    color: #333;
+    margin-right: 5px;
+}
+
+#skills-list button.delete {
+    background-color: #DC3545;
+    color: white;
+}
+
+#skills-list button:hover {
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #skills-manager {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #add-skill-form, #skills-list {
+        max-width: 100%;
+    }
+}
+
+
+
+/* Bouton Modifier */
+button.modifier {
+    background-color: #FFC107; 
+    color: #333; 
+    border: none;
+    border-radius: 5px;
+    padding: 8px 10px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-right: 10px; 
+}
+
+button.modifier:hover {
+    background-color: #FFB300; 
+    transform: scale(1.05); 
+}
+
+/* Bouton Supprimer */
+button.supprimer {
+    background-color: #DC3545; 
+    color: white; 
+    border: none;
+    border-radius: 5px;
+    padding: 8px 10px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.supprimer:hover {
+    background-color: #C82333; 
+    transform: scale(1.05); 
+}
