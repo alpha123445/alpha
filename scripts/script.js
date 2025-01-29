@@ -1,3 +1,14 @@
+//service worker
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+      .then((registration) => {
+        console.log('Service Worker enregistré avec succès :', registration);
+      })
+      .catch((error) => {
+        console.log('Erreur d\'enregistrement du Service Worker :', error);
+      });
+}
+
 const hamburger = document.getElementById('hamburger');
 const lienNav = document.getElementById('nav-links');
 
