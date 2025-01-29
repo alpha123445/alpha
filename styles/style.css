@@ -135,7 +135,7 @@ header nav ul li a:hover {
     margin-bottom: 10px; 
 }
 
-@keyframes bounce {
+/*@keyframes bounce {
     0%, 100% {
         transform: translateY(0);
     }
@@ -152,6 +152,7 @@ header nav ul li a:hover {
         opacity: 1;
     }
 }
+*/
 
 .animated-text {
     font-size: 2.5rem;
