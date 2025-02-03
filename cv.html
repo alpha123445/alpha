@@ -55,29 +55,30 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MSB23TTT"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <header>
-        <nav>
-            <div class="hamburger" id="hamburger">☰</div>
-            <ul id="nav-links">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="cv.html"> CV</a></li>
-                <li><a href="portfolio.html"> Portfolio</a></li>
-                <li><a href="contact.html"> Contact</a></li>
-                <li><a href="competences.html"> Gestion compétences</a></li>
+        <nav role="navigation" aria-label="Menu principal">
+            <div class="hamburger" id="hamburger" aria-label="Menu mobile">☰</div>
+            <ul id="nav-links" role="menubar">
+                <li role="menuitem"><a href="index.html">Accueil</a></li>
+                <li role="menuitem"><a href="cv.html">CV</a></li>
+                <li role="menuitem"><a href="portfolio.html">Portfolio</a></li>
+                <li role="menuitem"><a href="contact.html">Contact</a></li>
+                <li role="menuitem"><a href="competences.html">Gestion compétences</a></li>
             </ul>
         </nav>
     </header>
     <main>
+        <h1 style="text-align: center;">Mon CV</h1>
+        
         <!-- Infos -->
-         <h1 style="text-align: center;">Mon CV</h1>
-        <section class="card personal-info">
-            <h2>Alpha BAH</h2>
+        <section class="card personal-info" aria-labelledby="personal-info">
+            <h2 id="personal-info">Alpha BAH</h2>
             <p><strong>Email :</strong> alpha.2024bah@gmail.com</p>
             <p><strong>Ville :</strong> 08000, Charleville-Mézières</p>
         </section>
 
         <!-- Formations -->
-        <section class="card education">
-            <h2>Formations</h2>
+        <section class="card education" aria-labelledby="education">
+            <h2 id="education">Formations</h2>
             <ul>
                 <li>
                     <strong>Licence Pro métiers du numérique parcours intégration et webdesign (2024 - 2025)</strong>
@@ -95,8 +96,8 @@
         </section>
 
         <!-- Expériences professionnelles -->
-        <section class="card work-experience">
-            <h2>Expériences professionnelles</h2>
+        <section class="card work-experience" aria-labelledby="work-experience">
+            <h2 id="work-experience">Expériences professionnelles</h2>
             <div class="experience">
                 <p><strong>Stagiaire Développeur web</strong> - LCS</p>
                 <p>22 Janvier 2024 - 03 Mars 2024</p>
@@ -115,8 +116,8 @@
         </section>
 
         <!-- Compétences -->
-        <section class="card skills">
-            <h2>Compétences</h2>
+        <section class="card skills" aria-labelledby="skills">
+            <h2 id="skills">Compétences</h2>
             <div class="skill">
                 <i class="fas fa-code"></i> HTML & CSS, JavaScript & PHP, C#, Java, Python
             </div>
@@ -135,15 +136,15 @@
         </section>
 
         <!-- Centres d'intérêts -->
-        <section class="card interests">
-            <h2>Centres d'intérêts</h2>
+        <section class="card interests" aria-labelledby="interests">
+            <h2 id="interests">Centres d'intérêts</h2>
             <p>Auteur d’un roman | Écriture, Lecture</p>
             <p>Football, Vélo</p>
         </section>
     </main>
 
-     <!-- Footer-->
-     <footer>
+    <!-- Footer-->
+    <footer role="contentinfo" aria-label="Informations de contact et réseaux sociaux">
         <div class="footer-container">
             <div class="footer-left">
                 08000, Charleville-Mézières
@@ -152,10 +153,10 @@
                 <p>&copy; 2024 Alpha BAH. Tous droits réservés.</p>
             </div>
             <div class="footer-right">
-                <a href="https://www.linkedin.com/in/alpha-bah-7a5041294" target="_blank" class="social-link" rel="nofollow">
+                <a href="https://www.linkedin.com/in/alpha-bah-7a5041294" target="_blank" class="social-link" rel="nofollow" aria-label="LinkedIn">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://github.com/alpha123445" target="_blank" class="social-link" rel="nofollow">
+                <a href="https://github.com/alpha123445" target="_blank" class="social-link" rel="nofollow" aria-label="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
             </div>
