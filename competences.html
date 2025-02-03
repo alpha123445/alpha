@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
+
+<head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E3PQBEFX7F"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'G-E3PQBEFX7F');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Découvrez mes compétences en développement web, PHP, intégration front-end, webdesign et gestion de projets numériques.">
+    <meta name="description" content="Découvrez mes compétences en développement web, PHP, intégration front-end, webdesign, gestion de projets numériques et amélioration continue des compétences techniques.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Alpha BAH">
     <meta name="language" content="fr">
-    <meta name="keywords" content="compétences, développement web, PHP, intégration front-end, webdesign, gestion de projets numériques, UI/UX">
+    <meta name="keywords" content="compétences, développement web, PHP, intégration front-end, webdesign, gestion de projets numériques, UI/UX, gestion des compétences, amélioration continue">
     <title>Alpha BAH - Gestion des Compétences & Expertise Web</title>
     <link rel="robots" href="robots.txt">
     <!-- Facebook OpenGraph -->
@@ -31,19 +34,21 @@
     <meta name="twitter:title" content="Alpha BAH - Développeur Web & Intégrateur Web, UI/UX Design, SEO">
     <meta name="twitter:description" content="Portfolio de Alpha, développeur web spécialisé en intégration front-end, webdesign, développement PHP et création d'interfaces utilisateur modernes.">
     <meta name="twitter:image" content="assets/alpha.jpg">
+
     <link rel="canonical" href="https://alpha123445.github.io/alpha/competences.html">
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 
     <!-- Google Tag Manager -->
     <script>
-      (function(w,d,s,l,i){
-        w[l]=w[l]||[];
-        w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-        var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
-        j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-        f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-MSB23TTT');
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MSB23TTT');
     </script>
     <!-- End Google Tag Manager -->
 
@@ -53,52 +58,69 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  </head>
-  <body>
+</head>
+
+<body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MSB23TTT"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MSB23TTT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
     <!-- End Google Tag Manager (noscript) -->
+
     <header>
         <nav>
             <div class="hamburger" id="hamburger">☰</div>
             <ul id="nav-links">
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="cv.html"> CV</a></li>
-                <li><a href="portfolio.html"> Portfolio</a></li>
-                <li><a href="contact.html"> Contact</a></li>
-                <li><a href="competences.html"> Gestion compétences</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="competences.html">Gestion compétences</a></li>
             </ul>
         </nav>
     </header>
+
     <section id="skills-manager">
-      <h1>Gestion de compétences</h1>
-        <!-- <h2 class="section-title">Gestion des Compétences</h2> -->
+        <h1>Gestion de compétences</h1>
+        <p>En tant que développeur web, il est essentiel de maîtriser une variété de compétences techniques et fonctionnelles. Cette page vous permet de découvrir les différentes compétences que j'ai développées au fil des années et qui me permettent de réaliser des projets web de qualité. Ces compétences sont classées par niveau, de "Débutant" à "Avancé", pour mieux comprendre mon expertise dans chaque domaine.</p>
+
         <form id="add-skill-form">
-          <label for="skill-name">Nom de la compétence :</label>
-          <input type="text" id="skill-name" placeholder="Ex. JavaScript" required>
-      
-          <label for="skill-description">Description :</label>
-          <textarea id="skill-description" placeholder="Facultatif"></textarea>
-      
-          <label for="skill-level">Niveau :</label>
-          <select id="skill-level" required>
-            <option value="Débutant">Débutant</option>
-            <option value="Intermédiaire">Intermédiaire</option>
-            <option value="Avancé">Avancé</option>
-          </select>
-      
-          <button type="submit">Ajouter Compétence</button>
+            <label for="skill-name">Nom de la compétence :</label>
+            <input type="text" id="skill-name" placeholder="Ex. JavaScript" required>
+
+            <label for="skill-description">Description :</label>
+            <textarea id="skill-description" placeholder="Facultatif"></textarea>
+
+            <label for="skill-level">Niveau :</label>
+            <select id="skill-level" required>
+                <option value="Débutant">Débutant</option>
+                <option value="Intermédiaire">Intermédiaire</option>
+                <option value="Avancé">Avancé</option>
+            </select>
+
+            <button type="submit">Ajouter Compétence</button>
         </form>
-      
+
         <h2>Liste des Compétences</h2>
         <ul id="skills-list">
-          <!-- Compétences -->
+            <!-- Compétences -->
         </ul>
-      </section>
-      <script src="scripts/script.js"></script>
+
+        <h2>Compétences clés :</h2>
+        <ul>
+            <li><strong>PHP :</strong> Expertise en développement web dynamique et gestion de bases de données.</li>
+            <li><strong>JavaScript :</strong> Développement de sites web interactifs et responsive avec des bibliothèques comme React et Vue.js.</li>
+            <li><strong>Web Design :</strong> Création d'interfaces utilisateurs intuitives et esthétiques en utilisant les meilleures pratiques UI/UX.</li>
+            <li><strong>Gestion de projets :</strong> Mise en place de méthodologies agiles pour une gestion optimale des projets web.</li>
+        </ul>
+
+        <p>Mon approche de la gestion des compétences repose sur l'amélioration continue, l'adaptation aux besoins des clients et l'intégration des meilleures pratiques pour obtenir des résultats exceptionnels. Grâce à cette gestion, je reste toujours à la pointe de l'innovation, garantissant ainsi une valeur ajoutée à mes projets.</p>
+    </section>
+
+    <script src="scripts/script.js"></script>
 </body>
+
 </html>
